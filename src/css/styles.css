@@ -1,9 +1,9 @@
 body {
   background: #f0f4f8;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #0d2b45;
   margin: 0;
-  padding: 2rem;
+  padding: 0;
 }
 
 a {
@@ -14,48 +14,143 @@ a:hover {
   color: #f78e3d;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 2rem;
+.navbar {
+  background: white;
+  border-bottom: 1px solid #ddd;
 }
-header h1 {
-  font-size: 2.2rem;
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.navbar .logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
   color: #0d2b45;
 }
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.navbar .nav-links li a {
+  font-weight: bold;
+}
 
-main {
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+}
+.hero .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero .btn {
+  background: #f78e3d;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.featured-destinations,
+.latest-posts,
+.about,
+.contact {
+  padding: 4rem 2rem;
+}
+.featured-destinations .container,
+.latest-posts .container,
+.about .container,
+.contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.featured-destinations h2,
+.latest-posts h2,
+.about h2,
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.featured-destinations .grid,
+.latest-posts .grid,
+.about .grid,
+.contact .grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
-
-.post-card {
+.featured-destinations .card,
+.featured-destinations .post-card,
+.latest-posts .card,
+.latest-posts .post-card,
+.about .card,
+.about .post-card,
+.contact .card,
+.contact .post-card {
   background: white;
-  border: 2px solid #0d2b45;
+  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
   width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
-.post-card h2 {
+.featured-destinations .card h3,
+.featured-destinations .post-card h3,
+.latest-posts .card h3,
+.latest-posts .post-card h3,
+.about .card h3,
+.about .post-card h3,
+.contact .card h3,
+.contact .post-card h3 {
   font-size: 1.3rem;
   color: #0d2b45;
 }
-.post-card p {
+.featured-destinations .card p,
+.featured-destinations .post-card p,
+.latest-posts .card p,
+.latest-posts .post-card p,
+.about .card p,
+.about .post-card p,
+.contact .card p,
+.contact .post-card p {
   font-size: 0.95rem;
-  color: rgb(11.05, 36.55, 58.65);
+  color: #0a2237;
 }
-.post-card .meta {
+.featured-destinations .card .meta,
+.featured-destinations .post-card .meta,
+.latest-posts .card .meta,
+.latest-posts .post-card .meta,
+.about .card .meta,
+.about .post-card .meta,
+.contact .card .meta,
+.contact .post-card .meta {
   font-size: 0.8rem;
   color: #3d9a5d;
 }
 
 footer {
+  background: #fff;
   text-align: center;
-  margin-top: 3rem;
+  padding: 2rem;
   font-size: 0.9rem;
   color: #0d2b45;
+  border-top: 1px solid #ddd;
 }
 
 /*# sourceMappingURL=styles.css.map */

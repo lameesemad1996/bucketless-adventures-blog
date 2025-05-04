@@ -1,27 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Bucketless Adventures</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
   <header>
-    <h1><a href="/">Bucketless Adventures</a></h1>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">Bucketless Adventures</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#posts">Blog</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
-
   <main>
     
-<h2>🗺️ Latest Adventures</h2>
+<section class="hero" style="background-image: url('/images/hero.jpg');">
+  <div class="container">
+    <h1>Discover Europe's Hidden Gems on a Budget</h1>
+    <p>Join us as we explore the lesser-known destinations across Europe without breaking the bank.</p>
+    <a href="#destinations" class="btn">Start Exploring</a>
+  </div>
+</section>
 
+<section id="destinations" class="featured-destinations">
+  <div class="container">
+    <h2>Featured Destinations</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="/images/destination1.jpg" alt="Destination 1">
+        <h3>Destination 1</h3>
+        <p>Brief description of Destination 1.</p>
+      </div>
+      <div class="card">
+        <img src="/images/destination2.jpg" alt="Destination 2">
+        <h3>Destination 2</h3>
+        <p>Brief description of Destination 2.</p>
+      </div>
+      <div class="card">
+        <img src="/images/destination3.jpg" alt="Destination 3">
+        <h3>Destination 3</h3>
+        <p>Brief description of Destination 3.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <p>No posts yet. Stay tuned! 🚀</p>
+<section id="posts" class="latest-posts">
+  <div class="container">
+    <h2>Latest Blog Posts</h2>
+    <div class="grid">
+      
+    </div>
+  </div>
+</section>
 
+<section id="about" class="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>We are an Egyptian couple passionate about uncovering Europe's hidden gems. Our mission is to provide budget-friendly travel guides, tips, and stories to inspire your next adventure.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Have questions or want to collaborate? Reach out to us at <a href="mailto:contact@bucketlessadventures.com">contact@bucketlessadventures.com</a>.</p>
+  </div>
+</section>
 
   </main>
-
   <footer>
-    <p>📍 Budget Travel & Hidden Gems Across Europe</p>
+    <div class="container">
+      <p>&copy; 2025 Bucketless Adventures. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>

@@ -3,41 +3,62 @@ layout: layout.njk
 title: Home
 ---
 
-<section class="hero">
-  <h1>Explore Europe on a Budget</h1>
-  <p>Discover hidden gems and travel tips for the savvy explorer.</p>
-  <a href="/blog/" class="btn">Start Your Journey</a>
-</section>
-
-<section class="featured-destinations">
-  <h2>Featured Destinations</h2>
-  <div class="destinations-grid">
-    <!-- Repeat for each destination -->
-    <div class="destination-card">
-      <img src="/images/destination1.jpg" alt="Destination Name">
-      <h3>Destination Name</h3>
-      <p>Brief description of the destination.</p>
-      <a href="/destinations/destination-name/" class="btn">Learn More</a>
-    </div>
-    <!-- ... -->
+<section class="hero" style="background-image: url('/images/hero.jpg');">
+  <div class="container">
+    <h1>Discover Europe's Hidden Gems on a Budget</h1>
+    <p>Join us as we explore the lesser-known destinations across Europe without breaking the bank.</p>
+    <a href="#destinations" class="btn">Start Exploring</a>
   </div>
 </section>
 
-<section class="latest-posts">
-  <h2>Latest Blog Posts</h2>
-  <div class="posts-grid">
-    {% for post in collections.post | reverse | slice(0,3) %}
-    <div class="post-card">
-      <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
-      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-      <p>{{ post.data.excerpt }}</p>
-      <a href="{{ post.url }}" class="btn">Read More</a>
+<section id="destinations" class="featured-destinations">
+  <div class="container">
+    <h2>Featured Destinations</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="/images/destination1.jpg" alt="Destination 1">
+        <h3>Destination 1</h3>
+        <p>Brief description of Destination 1.</p>
+      </div>
+      <div class="card">
+        <img src="/images/destination2.jpg" alt="Destination 2">
+        <h3>Destination 2</h3>
+        <p>Brief description of Destination 2.</p>
+      </div>
+      <div class="card">
+        <img src="/images/destination3.jpg" alt="Destination 3">
+        <h3>Destination 3</h3>
+        <p>Brief description of Destination 3.</p>
+      </div>
     </div>
-    {% endfor %}
   </div>
 </section>
 
-<section class="about">
-  <h2>About Bucketless Adventures</h2>
-  <p>We're an Egyptian couple passionate about uncovering Europe's hidden treasures without breaking the bank. Join us as we share our adventures and tips.</p>
-  <a href="/about/" class="btn
+<section id="posts" class="latest-posts">
+  <div class="container">
+    <h2>Latest Blog Posts</h2>
+    <div class="grid">
+      {% for post in collections.post | slice(0, 3) %}
+      <div class="post-card">
+        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        <p>{{ post.templateContent | striptags | truncate(120, true, '...') }}</p>
+        <p class="meta">📅 {{ post.date | date("MMMM dd, yyyy") }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>We are an Egyptian couple passionate about uncovering Europe's hidden gems. Our mission is to provide budget-friendly travel guides, tips, and stories to inspire your next adventure.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Have questions or want to collaborate? Reach out to us at <a href="mailto:contact@bucketlessadventures.com">contact@bucketlessadventures.com</a>.</p>
+  </div>
+</section>
