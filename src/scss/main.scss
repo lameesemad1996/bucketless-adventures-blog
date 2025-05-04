@@ -1,0 +1,72 @@
+@use "sass:color";
+
+$color-primary: #0d2b45;
+$color-accent: #f78e3d;
+$color-secondary: #40a9ff;
+$color-green: #3d9a5d;
+$color-bg: #f0f4f8;
+
+body {
+  background: $color-bg;
+  font-family: 'Segoe UI', sans-serif;
+  color: $color-primary;
+  margin: 0;
+  padding: 2rem;
+}
+
+a {
+  color: $color-secondary;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2.2rem;
+    color: $color-primary;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.post-card {
+  background: white;
+  border: 2px solid $color-primary;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+
+  h2 {
+    font-size: 1.3rem;
+    color: $color-primary;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: color.scale($color-primary, $lightness: -15%);
+}
+
+  .meta {
+    font-size: 0.8rem;
+    color: $color-green;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: $color-primary;
+}
